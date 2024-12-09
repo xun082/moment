@@ -61,6 +61,24 @@ const config = {
             'background-position': '100% 50%',
           },
         },
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
+        'card-move': {
+          from: {
+            opacity: '0',
+            transform: 'translateY(200px)',
+          },
+          to: {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+        },
       },
       animation: {
         shimmer: 'shimmer 2s infinite',
@@ -69,6 +87,9 @@ const config = {
         'bounce-x': 'bounce-x 1s ease-in-out infinite',
         'card-hover': 'card-hover 3s ease-in-out infinite',
         'border-flow': 'border-flow 4s ease infinite',
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+        'card-move': 'card-move 0.25s ease-out',
       },
       colors: {
         border: 'hsl(var(--border))',
@@ -150,39 +171,6 @@ const config = {
         lg: 'var(--radius-lg)',
         md: 'calc(var(--radius-lg) - 2px)',
         sm: 'calc(var(--radius-lg) - 4px)',
-      },
-      keyframes: {
-        'accordion-down': {
-          from: {
-            height: '0',
-          },
-          to: {
-            height: 'var(--radix-accordion-content-height)',
-          },
-        },
-        'accordion-up': {
-          from: {
-            height: 'var(--radix-accordion-content-height)',
-          },
-          to: {
-            height: '0',
-          },
-        },
-        'card-move': {
-          from: {
-            opacity: '0',
-            transform: 'translateY(200px)',
-          },
-          to: {
-            opacity: '1',
-            transform: 'translateY(0)',
-          },
-        },
-      },
-      animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
-        'card-move': 'card-move 0.25s ease-out',
       },
     },
   },
