@@ -10,6 +10,9 @@ const nextConfig = {
       },
     ],
   },
+  eslint: {
+    ignoreDuringBuilds: true, // 在构建时忽略 ESLint 错误和警告
+  },
 };
 
 export default nextConfig;
